@@ -71,12 +71,11 @@ button {
 
 <body>
 
-<!-- MUSIC (stays alive across page swap) -->
 <audio id="music" loop>
   <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
 </audio>
 
-<div class="card" id="card">
+<div class="card">
   <h1>Grace, will you be my Valentine? 💘</h1>
 
   <div class="buttons">
@@ -87,7 +86,6 @@ button {
   <div class="hint">“No” seems a bit shy 😈</div>
 </div>
 
-<!-- Confetti library -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <script>
@@ -97,18 +95,14 @@ const music = document.getElementById("music");
 
 let scale = 1;
 
-// NO button runs away from cursor (classic behavior)
 noBtn.addEventListener("mouseenter", () => {
   const x = Math.random() * 260 - 130;
   const y = Math.random() * 80 - 40;
-
   noBtn.style.transform = `translate(${x}px, ${y}px)`;
-
   scale += 0.12;
   yesBtn.style.transform = `translateX(-50%) scale(${scale})`;
 });
 
-// YES click
 yesBtn.addEventListener("click", () => {
   music.volume = 0.6;
   music.play();
@@ -135,7 +129,7 @@ yesBtn.addEventListener("click", () => {
           border-radius:25px;
           box-shadow:0 20px 40px rgba(0,0,0,0.15);
         ">
-          <h1>YAY!! 🎉💖</h1>
+          <h1>WOOHOOO!! 🎉💖</h1>
 
           <img src="https://vedanshxv.github.io/vday/us.jpg"
                style="
@@ -146,18 +140,10 @@ yesBtn.addEventListener("click", () => {
                ">
 
           <p style="margin-top:20px;font-size:20px;">
-  Best decision ever!!!! Get ready for some good fucking pasta
-  <img
-  src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBAQEA8QDxAQEA8QEA8QEA8PFREWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGy0lHyUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKAAoAMBIgACEQEDEQH/xAAXAAADAQAAAAAAAAAAAAAAAAAEBQYB/8QAJxAAAQMEAQMEAwAAAAAAAAAAAQIDBAUREiExBhNBURQiMmFxgaH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAZEQEBAQADAAAAAAAAAAAAAAABAgMRIRP/2gAMAwEAAhEDEQA/APn6iiiiooooKKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q=="
-  style="
-    height:48px;
-    vertical-align:middle;
-    margin-left:8px;
-  "
-/>
-
-</p>
-
+            Best decision ever!!!! Get ready for some good fucking pasta
+            <img src="https://vedanshxv.github.io/vday/emoji.jpg?v=3"
+                 style="height:56px;vertical-align:middle;margin-left:10px;">
+          </p>
 
           <audio autoplay loop>
             <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
